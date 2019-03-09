@@ -1,0 +1,16 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.3.RELEASE'
+}
+
+bootJar {
+    mainClassName = "com.marshmallow.platform.MarshmallowPlatformApplication"
+}
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter:$spring"
+
+    testImplementation "org.springframework.boot:spring-boot-starter-web:$spring"
+
+    implementation project(':robotic-cleaner-core')
+    implementation project(':robotic-cleaner-rest')
+}

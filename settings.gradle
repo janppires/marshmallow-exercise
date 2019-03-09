@@ -1,0 +1,9 @@
+rootProject.name = 'robotic-cleaner'
+
+include 'application'
+include 'core'
+include 'rest'
+
+rootProject.children.each { subProject ->
+    subProject.name = rootProject.name + '-' + subProject.name
+}
